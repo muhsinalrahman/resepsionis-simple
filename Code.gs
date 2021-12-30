@@ -130,7 +130,7 @@ function prosesPesan(update) {
 			var text = update.message.text;
 
 			// jika user mengetik /start
-			if (/^\/start$/i.exec(text)) {
+			if (/^\/start$/i.test(text)) {
 				var balas = "Halo! Resepsionis bot telah aktif!";
 				var keyboard = [
 					["/ping", "About"],
@@ -141,7 +141,7 @@ function prosesPesan(update) {
 
 
 			// jika user mengetik /ping
-			if (/^\/ping/i.exec(text)) {
+			if (/^\/ping/i.test(text)) {
 				var waktuPesan = update.message.date;
 				var waktuSekarang = new Date().getTime() / 1000;
 				var waktu = Math.abs(waktuSekarang - waktuPesan).toFixed(2);
@@ -153,13 +153,13 @@ function prosesPesan(update) {
 			// Code bisa ditambahkan di area ini
 
 			// mendeteksi text "Tutup"
-			if (/^Tutup$/.exec(text)) {
+			if (/^Tutup$/.test(text)) {
 				var balas = "Baiklah, keyboard akan ditutup/dihapus";
 				return sendMessageRemoveKeyboard(id, balas);
 			}
 
 			// mendeteksi text "About"
-			if (/^About$/.exec(text)) {
+			if (/^About$/.test(text)) {
 				var balas = "Sekilas tentang <b>Resepsionis Bot</b>!\nSaya adalah bot interaktif yang dapat kamu kembangkan lebih jauh dan lebih keren lagi!\n\nDibuat oleh: <a href='https://telegram.me/muhsinalr'>Muhsinalr</a>.\nUntuk cara pembuatan dan pengembangan bisa dilihat <a href='https://muhsinalr.com'>di sini</a>.";
 				var keyboard = [
 					[
