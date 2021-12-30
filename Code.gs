@@ -1,5 +1,5 @@
 // masukkan token bot yang didapatkan dari @botfather
-var token = "5049590768:AAFuXvMVi8_ZzuyI45FYPCe3F2kD8JUse0U"
+var token = "TOKEN BOT KAMU"
 
 // url bot api
 var url = "https://api.telegram.org/bot" + token + "/";
